@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1em;
   text-align: center;
 }
@@ -63,7 +63,7 @@ a {
 
 .title {
   color: #faf3ff;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   padding: 0 0 1rem;
@@ -77,6 +77,9 @@ a {
   font-weight: 400;
   margin: 0;
   padding: 0 0 1rem;
+}
+.text--lg {
+  font-size: 1.4rem;
 }
 .text--bold {
   font-weight: 700;
