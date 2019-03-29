@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+
+  <title>Blog Dispropil | Miubeta</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="mobile">
+  <div class="all">
+    <h1 class="logo"><img class="logo__image" src="../assets/images/miubeta.svg" alt="Miubeta"> | Apresentação Layout Blog <a class="mobile-button" href="#">versão desktop</a></h1>
+
+    <ul class="menu">
+      <li class="menu__item"><a data-src="home" href="#" class="menu__link menu__link--active">Home</a></li>
+      <li class="menu__item"><a data-src="homenav" href="#" class="menu__link menu__link--mobile">Menu</a></li>
+      <li class="menu__item"><a data-src="category" href="#" class="menu__link">Categoria</a></li>
+      <li class="menu__item"><a data-src="post" href="#" class="menu__link">Post</a></li>
+    </ul>
+
+    <div class="wrapper">
+      <img src="home-mobile.png">
+    </div>
+
+    <div class="trapezoid"></div>
+  </div>
+
+  <script>
+    window.isMobile = true;
+
+    var body = document.querySelector('body');
+    var menu = document.querySelector('.menu');
+    var menuLink = document.querySelectorAll('.menu__link');
+    var menuLinkFirst = document.querySelector('.menu__item:first-child .menu__link');
+    var image = document.querySelector('.wrapper img');
+    var mobileButton = document.querySelector('.mobile-button');
+
+    mobileButton.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      body.classList.toggle('mobile');
+
+      window.isMobile = body.classList.contains('mobile');
+
+      image.src = !isMobile ? 'home-web.png' : 'home-mobile.png'
+
+      menuLink.forEach(function(link) {
+        link.classList.remove('menu__link--active');
+      })
+
+      menuLinkFirst.classList.add('menu__link--active');
+    });
+
+    menu.addEventListener('click', function(e) {
+      var imageSrc = e.target.dataset.src;
+      var sufix = !isMobile ? '-web.png' : '-mobile.png'
+
+      e.preventDefault();
+
+      if(imageSrc) {
+        image.src = `${imageSrc}${sufix}`;
+      }
+
+      menuLink.forEach(function(link) {
+        link.classList.remove('menu__link--active');
+      })
+
+      e.target.classList.add('menu__link--active');
+    });
+  </script>
+</body>
+</html>
