@@ -11,7 +11,7 @@ html {
   transition: all .6s ease;
 }
 body {
-  background-color: #e6e0eb;
+  background-color: #eeeeee;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1em;
   text-align: center;
@@ -42,7 +42,7 @@ img {
   align-items: center;
 }
 .wrapper {
-  border: 1rem solid #33243e;
+  border: 1rem solid #222222;
   border-radius: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   max-width: 1280px;
@@ -56,7 +56,7 @@ img {
   max-height: 640px;
 }
 .trapezoid {
-  border-bottom: 30px solid #291d31;
+  border-bottom: 30px solid #222222;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-radius: 15px;
@@ -78,7 +78,7 @@ img {
   display: block;
   text-decoration: none;
   font-weight: bold;
-  color: #33243e;
+  color: #222222;
   opacity: .5;
   background-color: transparent;
   border-radius: 4px 4px 0 0;
@@ -87,7 +87,7 @@ img {
   opacity: 1;
 }
 .menu__link--active {
-  background-color: #33243e;
+  background-color: #222222;
   color: #ffffff;
   opacity: 1;
 }
@@ -100,7 +100,7 @@ img {
 
 .mobile-button {
   background-color: #7a0ecc;
-  color: #e6e0eb;
+  color: #eeeeee;
   text-decoration: none;
   font-size: 1rem;
   display: block;
@@ -109,5 +109,5 @@ img {
   margin: 0 0 0 10px;
 }
 .mobile .mobile-button {
-  background-color: #a29ba9;
+  background-color: #aaaaaa;
 }
