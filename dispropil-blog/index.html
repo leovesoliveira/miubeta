@@ -27,7 +27,7 @@
     </ul>
 
     <div class="wrapper">
-      <img src="home-mobile.png">
+      <img src="home-mobile.jpg">
     </div>
 
     <div class="trapezoid"></div>
@@ -50,7 +50,7 @@
 
       window.isMobile = body.classList.contains('mobile');
 
-      image.src = !isMobile ? 'home-web.png' : 'home-mobile.png'
+      image.src = !isMobile ? 'home-web.jpg' : 'home-mobile.jpg'
 
       menuLink.forEach(function(link) {
         link.classList.remove('menu__link--active');
@@ -61,7 +61,7 @@
 
     menu.addEventListener('click', function(e) {
       var imageSrc = e.target.dataset.src;
-      var sufix = !isMobile ? '-web.png' : '-mobile.png'
+      var sufix = !isMobile ? '-web.jpg' : '-mobile.jpg'
 
       e.preventDefault();
 
